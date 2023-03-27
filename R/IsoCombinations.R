@@ -1,5 +1,5 @@
 #' @importFrom dplyr last
-#' @importFrom dplyr arrange_
+#' @importFrom dplyr arrange
 #' @importFrom stringr str_c
 #' @importFrom tibble as_tibble
 #' @importFrom magrittr '%>%'
@@ -61,7 +61,7 @@ IsoCombinations <- function(Fragment, x, Element, ElementInfo, AvailablePlacesTo
 
   # CombinationsArrayPreList is sorted to get the most probable combinations on top
 
-  CombinationsArrayPreList2 <- CombinationsArrayPreList %>% as_tibble() %>% dplyr::arrange_(.dots = names(CombinationsArrayPreList)) %>% as.list()
+  CombinationsArrayPreList2 <- CombinationsArrayPreList %>% as_tibble() %>% dplyr::arrange(pick(names(CombinationsArrayPreList))) %>% as.list()
 
   CombinationsArrayPre.df <- as.data.frame(lapply(CombinationsArrayPreList2, function(x) rev(x)))
 

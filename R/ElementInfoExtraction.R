@@ -33,7 +33,7 @@ ElementInfoExtraction <- function(ElementData, UltraHighRes, logEnvironment, ver
     
     ElementArray_df <- as.data.frame(ElementArray)
     
-    ElementArray_df <- ElementArray_df[order(ElementArray_df["IsotopeAbundance"], decreasing = TRUE),] 
+    ElementArray_df <- ElementArray_df[order(ElementArray_df[["IsotopeAbundance"]], decreasing = TRUE),] 
     
     ElementArray_tbl <- tibble::as_tibble(ElementArray_df)
     
