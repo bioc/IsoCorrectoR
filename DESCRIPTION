@@ -16,7 +16,6 @@ Imports:
     utils,
     pracma,
     WriteXLS
-Suggests: BiocStyle 
 Description: IsoCorrectoR performs the correction of mass spectrometry data from stable isotope labeling/tracing metabolomics experiments with regard to natural isotope abundance and tracer impurity. Data from both MS and MS/MS measurements can be corrected (with any tracer isotope: 13C, 15N, 18O...), as well as ultra-high resolution MS data from multiple-tracer experiments (e.g. 13C and 15N used simultaneously). See the Bioconductor package IsoCorrectoRGUI for a graphical user interface to IsoCorrectoR. NOTE: With R version 4.0.0, writing correction results to Excel files may currently not work on Windows. However, writing results to csv works as before.
 Depends: R (>= 3.5)
 URL: https://genomics.ur.de/files/IsoCorrectoR/
@@ -29,5 +28,6 @@ Suggests:
     IsoCorrectoRGUI,
     knitr,
     rmarkdown,
-    testthat
+    testthat,
+    BiocStyle
 VignetteBuilder: knitr
